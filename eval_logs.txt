@@ -1,0 +1,9 @@
+Hyperparameters: {'batch_size': 32, 'block_size': 32, 'max_iters': 5000, 'eval_interval': 500, 'learning_rate': 0.001, 'n_embd': 128, 'device': 'cpu'}
+Train Loss: 2.2702, Val Loss: 2.3341  # one head-attention only
+
+Hyperparameters: {'batch_size': 32, 'block_size': 8, 'max_iters': 5000, 'eval_interval': 500, 'learning_rate': 0.001, 'n_embd': 32, 'dropout': 0.0, 'device': 'cpu'}
+Train Loss: 2.2668, Val Loss: 2.2869 # multi-head attention of 4 heads
+
+Hyperparameters: {'batch_size': 32, 'block_size': 8, 'max_iters': 5000, 'eval_interval': 500, 'learning_rate': 0.001, 'n_embd': 32, 'dropout': 0.0, 'device': 'cpu'}
+Train Loss: 2.2187, Val Loss: 2.2472
+
