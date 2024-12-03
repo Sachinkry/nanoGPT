@@ -1,0 +1,171 @@
+Train Loss: 4.3387, Val Loss: 4.3485
+Tokens/Second: 0.00, GPU Utilization: 0%, Memory Usage: 0.24 GB
+
+Train Loss: 2.6136, Val Loss: 2.6146
+Tokens/Second: 13974.75, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.4867, Val Loss: 2.4921
+Tokens/Second: 17384.66, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.3951, Val Loss: 2.3992
+Tokens/Second: 19197.60, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.3157, Val Loss: 2.3238
+Tokens/Second: 20210.19, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.2508, Val Loss: 2.2681
+Tokens/Second: 20840.12, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.1936, Val Loss: 2.2166
+Tokens/Second: 21326.67, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.1426, Val Loss: 2.1660
+Tokens/Second: 21619.99, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.0994, Val Loss: 2.1315
+Tokens/Second: 21837.47, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.0546, Val Loss: 2.0997
+Tokens/Second: 22040.46, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 2.0161, Val Loss: 2.0732
+Tokens/Second: 22108.04, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.9755, Val Loss: 2.0374
+Tokens/Second: 22239.11, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.9393, Val Loss: 2.0158
+Tokens/Second: 22321.93, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.9069, Val Loss: 1.9908
+Tokens/Second: 22393.81, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.8775, Val Loss: 1.9595
+Tokens/Second: 22451.74, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.8514, Val Loss: 1.9513
+Tokens/Second: 22511.27, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.8264, Val Loss: 1.9428
+Tokens/Second: 22563.30, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.8071, Val Loss: 1.9307
+Tokens/Second: 22605.88, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7903, Val Loss: 1.9257
+Tokens/Second: 22668.52, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7686, Val Loss: 1.9022
+Tokens/Second: 22687.89, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7432, Val Loss: 1.8869
+Tokens/Second: 22719.58, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7350, Val Loss: 1.8754
+Tokens/Second: 22665.25, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7195, Val Loss: 1.8662
+Tokens/Second: 22633.47, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.7077, Val Loss: 1.8671
+Tokens/Second: 22580.58, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6932, Val Loss: 1.8477
+Tokens/Second: 22511.47, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6929, Val Loss: 1.8569
+Tokens/Second: 22451.02, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6692, Val Loss: 1.8317
+Tokens/Second: 22424.65, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6549, Val Loss: 1.8256
+Tokens/Second: 22397.74, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6443, Val Loss: 1.8208
+Tokens/Second: 22371.60, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6408, Val Loss: 1.8103
+Tokens/Second: 22361.53, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6335, Val Loss: 1.8026
+Tokens/Second: 22339.79, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6164, Val Loss: 1.7966
+Tokens/Second: 22321.92, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6193, Val Loss: 1.7873
+Tokens/Second: 22292.14, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6053, Val Loss: 1.7758
+Tokens/Second: 22251.19, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.6081, Val Loss: 1.7854
+Tokens/Second: 22238.62, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5974, Val Loss: 1.7751
+Tokens/Second: 22196.69, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5915, Val Loss: 1.7766
+Tokens/Second: 22168.37, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5834, Val Loss: 1.7663
+Tokens/Second: 22149.99, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5838, Val Loss: 1.7651
+Tokens/Second: 22086.31, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5823, Val Loss: 1.7557
+Tokens/Second: 21912.10, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5719, Val Loss: 1.7621
+Tokens/Second: 21699.17, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5716, Val Loss: 1.7466
+Tokens/Second: 21574.29, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5562, Val Loss: 1.7408
+Tokens/Second: 21526.66, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5534, Val Loss: 1.7331
+Tokens/Second: 21512.13, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5527, Val Loss: 1.7298
+Tokens/Second: 21501.00, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5402, Val Loss: 1.7239
+Tokens/Second: 21489.03, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5396, Val Loss: 1.7251
+Tokens/Second: 21487.43, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5473, Val Loss: 1.7289
+Tokens/Second: 21472.20, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5317, Val Loss: 1.7227
+Tokens/Second: 21415.73, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5308, Val Loss: 1.7244
+Tokens/Second: 21336.60, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5282, Val Loss: 1.7166
+Tokens/Second: 21297.39, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+Train Loss: 1.5241, Val Loss: 1.7143
+Tokens/Second: 21069.70, GPU Utilization: 0%, Memory Usage: 0.27 GB
+
+batch_size = 32 
+block_size = 128 
+max_iters = 5000
+eval_interval = 100
+learning_rate = 1e-3
+eval_iters = 200
+n_embd = 128
+n_head = 8
+n_layer = 8
+dropout = 0.2
+[Metrics] Train Loss: 1.3404, Val Loss: 1.5711
+Total tokens: 20480000
+[Metrics] Tokens/Second: 3653.70, Time/Token: 0.273695 ms
+Training Time: 93.42 mins
+[Metrics] GPU Utilization: 0%, Memory Usage: 0.76 GB

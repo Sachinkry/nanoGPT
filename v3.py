@@ -2,16 +2,18 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
+from metrics import MetricsTracker
+from torch.utils.data import Dataset, DataLoader
 
 # hyperparameters
 batch_size = 32 # how many independent sequences will we process in parallel?
-block_size = 128 # what is the max context length for predictions?
-max_iters = 5000
+block_size = 64 # what is the max context length for predictions?
+max_iters = 3000
 eval_interval = 100
 learning_rate = 1e-3
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 eval_iters = 200
-n_embd = 128
+n_embd = 40
 n_head = 4
 n_layer = 4
 dropout = 0.0
@@ -186,27 +188,13 @@ class BigramLanguageModel(nn.Module):
 model = BigramLanguageModel()
 m = model.to(device)
 # print the number of parameters in the model
-print(sum(p.numel() for p in m.parameters())/1e6, 'M parameters')
-
-def log_losses_and_hyperparameters(train_loss, val_loss, hyperparameters, filename='eval_logs.txt'):
-  with open(filename, 'a') as f:
-      f.write(f"Hyperparameters: {hyperparameters}\n")
-      # f.write(f"Model Architecture:\n{model}\n")
-      f.write(f"Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}\n\n")
-
-# Define the hyperparameters to log
-hyperparameters = {
-    'batch_size': batch_size,
-    'block_size': block_size,
-    'max_iters': max_iters,
-    'eval_interval': eval_interval,
-    'learning_rate': learning_rate,
-    'n_embd': n_embd,
-    'n_head': n_head,
-    'n_layer': n_layer,
-    'dropout': dropout,
-    'device': device
-}
+num_params = sum(p.numel() for p in m.parameters())
+memory_mb = num_params * 4 / (1024**2)
+print(f"{num_params/1e6} M parameters, Memory: {memory_mb:.2f} MB")
+# import sys; sys.exit(0)
+# Initialize the metrics tracker
+tracker = MetricsTracker(model, batch_size, block_size, eval_iters)
+num_tokens_processed = 0
 
 # create a pytorch optimizer
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
@@ -217,6 +205,7 @@ for iter in range(max_iters):
   if iter % eval_interval == 0 or iter == max_iters - 1:
     losses = estimate_loss()
     print(f"step {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
+    # tracker.log_metrics(losses['train'], losses['val'], num_tokens_processed)
 
   # sample a batch of data
   xb, yb = get_batch('train')
@@ -227,11 +216,14 @@ for iter in range(max_iters):
   loss.backward()
   optimizer.step()
 
+  # Track the number of tokens processed
+  num_tokens_processed += batch_size * block_size
+
 # Log the final losses and hyperparameters to a file
 final_losses = estimate_loss()
-log_losses_and_hyperparameters(final_losses['train'], final_losses['val'], hyperparameters)
+tracker.log_metrics(final_losses['train'], final_losses['val'], num_tokens_processed)
 
 # generate from the model 
 context = torch.zeros((1,1), dtype=torch.long, device=device)
-print(decode(m.generate(context, max_new_tokens=2000)[0].tolist()))
+print(decode(m.generate(context, max_new_tokens=800)[0].tolist()))
     
