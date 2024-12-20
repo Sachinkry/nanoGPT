@@ -7,11 +7,11 @@ from torch.utils.data import Dataset, DataLoader
 
 # hyperparameters
 batch_size = 32 # how many independent sequences will we process in parallel?
-block_size = 64 # what is the max context length for predictions?
+block_size = 128 # what is the max context length for predictions?
 max_iters = 3000
 eval_interval = 100
 learning_rate = 1e-3
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 eval_iters = 200
 n_embd = 40
 n_head = 4
@@ -137,7 +137,7 @@ class Block(nn.Module):
     return x
 
 # super simple bigram model
-class BigramLanguageModel(nn.Module):
+class NanoGPTModel(nn.Module):
   
   def __init__(self):
     super().__init__()
@@ -185,8 +185,19 @@ class BigramLanguageModel(nn.Module):
       idx = torch.cat((idx, idx_next), dim=1)  # (B, T+1)
     return idx
   
-model = BigramLanguageModel()
-m = model.to(device)
+model = NanoGPTModel()
+model.to(device)
+m = torch.compile(model)   # OPTIMIZATION #1
+
+# Model configuration and number of parameters
+model_config = {
+    "batch_size": batch_size,
+    "block_size": block_size,
+    "n_embd": n_embd,
+    "n_head": n_head,
+    "n_layer": n_layer,
+    "vocab_size": vocab_size,
+}
 # print the number of parameters in the model
 num_params = sum(p.numel() for p in m.parameters())
 memory_mb = num_params * 4 / (1024**2)
@@ -211,6 +222,7 @@ for iter in range(max_iters):
   xb, yb = get_batch('train')
 
   # evaluate the loss
+  
   logits, loss = model(xb, yb)
   optimizer.zero_grad(set_to_none=True)
   loss.backward()
@@ -221,6 +233,7 @@ for iter in range(max_iters):
 
 # Log the final losses and hyperparameters to a file
 final_losses = estimate_loss()
+print(f"No. of params: {num_params} | Model config: {model_config}")
 tracker.log_metrics(final_losses['train'], final_losses['val'], num_tokens_processed)
 
 # generate from the model 
