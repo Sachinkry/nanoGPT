@@ -6,7 +6,7 @@ This project is a stripped-down implementation of a character-level GPT (Generat
 
 ### Models
 - `bigram.py`: Simplest possible language model using bigram probabilities.
-- `v2.py`, `v3.py`: Iterative improvements, with increasing model depth and complexity—transformer blocks, layer norm, dropout, etc.
+- `v2.py`, `v3.py`: Iterative improvements, with increasing model depth and complexity:transformer blocks, layer norm, dropout, etc.
 
 ### Training
 - `train_gpt2.py`: Main training script for GPT models.
